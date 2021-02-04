@@ -31,5 +31,10 @@ public class UserInput : MonoBehaviour
         {
             ballRigidbody2D.AddForce(yDirection, ForceMode2D.Force);
         }
+
+		if (Input.GetButtonDown("Jump"))
+		{
+			ballRigidbody2D.AddForce(yDirection, ForceMode2D.Force);
+		}
     }
 }
