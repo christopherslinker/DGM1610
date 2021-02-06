@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 5483794}
   - component: {fileID: 5483798}
   - component: {fileID: 5483799}
-  - component: {fileID: 5483800}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -265,19 +264,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5483793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baed74c8b144e463b820931b3eab1b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5483800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5483793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2afe1d9ed00ca48c59018fcf5e57afb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 49ba217660b5c44689fb7ebef0c9de7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &577960384
@@ -294,8 +281,10 @@ GameObject:
   - component: {fileID: 577960385}
   - component: {fileID: 577960389}
   - component: {fileID: 577960390}
+  - component: {fileID: 577960391}
+  - component: {fileID: 577960392}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Character1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -429,6 +418,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68f70a20c4d24e468dc12657286298b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &577960391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577960384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aef7a3af48484e02b07ce7ec5b1b97b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &577960392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577960384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f150fc244b6fb4927a98fe6dde8dfd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players: []
 --- !u!1 &1082612709
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +746,7 @@ GameObject:
   - component: {fileID: 1906855468}
   - component: {fileID: 1906855467}
   - component: {fileID: 1906855470}
+  - component: {fileID: 1906855471}
   m_Layer: 0
   m_Name: BallGenerator
   m_TagString: Untagged
@@ -828,3 +843,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68f70a20c4d24e468dc12657286298b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1906855471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906855466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb42f6674b5f4c1891f7b80301e8170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intellegence: 2
