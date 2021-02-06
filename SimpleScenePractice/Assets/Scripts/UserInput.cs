@@ -1,27 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class UserInput : MonoBehaviour
-{
-
-    public Rigidbody2D ballRigidBody2D;
+{ 
+    public Rigidbody2D ballRigidbody2D; 
     public float speed = 3f;
-    public float jumpForce = 300f;
+    public float jumpForce = 20f;
+    
+    private Vector2 direction;
+    private Vector2 yDirection;
 
-	private Vector2 direction;
-	private Vector2 yDirection;
+    private int score;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
- 		direction.x = Input.GetAxis("Horizontal") * speed;
-		ballRigidBody2D.AddForce(direction, ForceMode2D.Force);
+        direction.x = Input.GetAxis("Horizontal");
+        if (!Input.GetButtonDown("Jump")) return;
+        yDirection.y = jumpForce;
+    }
 
-		if (Input.GetButtonDown("Jump"))
-		{
-			yDirection.y=jumpForce;
-			ballRigidBody2D.AddForce(yDirection, ForceMode2D.Force);
-		}
+    private void FixedUpdate()
+    {
+        var newDirection = direction * (speed * Time.deltaTime);
+        ballRigidbody2D.AddForce(newDirection, ForceMode2D.Force);
+        ballRigidbody2D.AddForce(yDirection, ForceMode2D.Force);
     }
 }
