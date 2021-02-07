@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UserInput : MonoBehaviour
 {
-	public Rigidbody2D ballRigidBody2D;
-	public float speed = 3f;
+	public Rigidbody2D ballRigidbody2D;
+	public float speed = 7f;
 	public float jumpForce = 300f;
 	
 	private Vector2 direction;
