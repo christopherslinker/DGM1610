@@ -9,7 +9,7 @@ public class Counter : MonoBehaviour
 	public Text counterText;
 
     // Update is called once per frame
-    void onTriggerEnter2D()
+    void Update()
     {
         numberCount++;
 		counterText.text = numberCount.ToString();

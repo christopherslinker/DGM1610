@@ -10,15 +10,15 @@ public class UserInput : MonoBehaviour
 	
 	private Vector2 direction;
 	private Vector2 yDirection;
-	
-void Update()
+
+	void Update()
 {
     direction.x = Input.GetAxis("Horizontal") * speed;
     ballRigidbody2D.AddForce(direction, ForceMode2D.Force);
-    
+
     if (Input.GetButtonDown("Jump"))
     {
-        yDirection.y = jumpForce;
+	    yDirection.y = jumpForce;
         ballRigidbody2D.AddForce(yDirection, ForceMode2D.Force);
     }
 }
