@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
-	public int numberCount;
-	public Text counterText;
-
-    // Update is called once per frame
-    void Update()
+    public int creditValue = 3;
+    public IntData numberCount;
+    public Text counterText;
+    void OnTriggerEnter2D()
     {
-        numberCount++;
-		counterText.text = numberCount.ToString();
+        numberCount.value += creditValue;
+        counterText.text = numberCount.value.ToString();
+        gameObject.SetActive(false);
     }
 }
