@@ -12,10 +12,10 @@ public class VariableAndOperators : MonoBehaviour
         string myName = "John";
         int x = 5;
         int y = 10;
-        int z = x + y;
-        int x = 5, y = 10, z = 50;
-        Console.WriteLine(x + y + z);
-        Console.WriteLine(z);
+        //int z = x + y;
+        //int x = 5, y = 10, z = 50;
+       // Console.WriteLine(x + y + z);
+        //Console.WriteLine(z);
         Console.WriteLine(x+y);
         Console.WriteLine(myInt);
         Console.WriteLine(myName);
