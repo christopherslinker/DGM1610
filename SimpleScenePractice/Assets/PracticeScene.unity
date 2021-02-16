@@ -133,8 +133,6 @@ GameObject:
   - component: {fileID: 5483796}
   - component: {fileID: 5483795}
   - component: {fileID: 5483794}
-  - component: {fileID: 5483798}
-  - component: {fileID: 5483799}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -243,30 +241,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5483798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5483793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68f70a20c4d24e468dc12657286298b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5483799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5483793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ba217660b5c44689fb7ebef0c9de7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &577960384
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +387,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 577960384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4077965c2b0445ea81ebbd50b0e3a64, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cb8e04497c7641e38212e9cb2af56cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &777388518
@@ -506,7 +480,6 @@ GameObject:
   - component: {fileID: 1082612712}
   - component: {fileID: 1082612711}
   - component: {fileID: 1082612710}
-  - component: {fileID: 1082612714}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -703,18 +676,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1082612714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082612709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68fd9e4a7adab4c449783f4b5f4513ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1429332804
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,7 +869,6 @@ GameObject:
   - component: {fileID: 1906855469}
   - component: {fileID: 1906855468}
   - component: {fileID: 1906855467}
-  - component: {fileID: 1906855470}
   m_Layer: 0
   m_Name: BallGenerator
   m_TagString: Untagged
@@ -993,18 +953,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1906855470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906855466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68f70a20c4d24e468dc12657286298b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1939312596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,7 +1050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c39c9ee880c463095b34f53aea8ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creditValue: 3
+  CoinValue: 3
   numberCount: {fileID: 0}
   counterText: {fileID: 777388520}
 --- !u!61 &2032164401

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
-    public int creditValue = 3;
+    public int CoinValue = 3;
     public IntData numberCount;
     public Text counterText;
 
@@ -15,7 +15,7 @@ public class Counter : MonoBehaviour
 
     void OnTriggerEnter2D()
     {
-        numberCount.value += creditValue;
+        numberCount.value += CoinValue;
         counterText.text = numberCount.value.ToString();
         gameObject.SetActive(false);
     }
