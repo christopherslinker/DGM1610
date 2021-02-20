@@ -40,6 +40,24 @@ public class InClassIfStatement : MonoBehaviour
         {
             print(false);
         }
+
+        if (password == "Walt sent me.")
+        {
+            print("Enter.");
+        }
+        else
+        {
+            print("Wrong.");
+        }
+
+        if (!canEnter)
+        {
+            print("Enter.");
+        }
+        else
+        {
+            print("Wrong.");
+        }
         
     }
 
