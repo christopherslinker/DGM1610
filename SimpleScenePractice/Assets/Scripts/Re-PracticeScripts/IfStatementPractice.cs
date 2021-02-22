@@ -9,9 +9,9 @@ public class IfStatementPractice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Y))
         {
-            translate.y 
+            Destroy(gameObject);
         }
     }
 
