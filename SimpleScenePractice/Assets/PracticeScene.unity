@@ -1188,12 +1188,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2032164399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0c39c9ee880c463095b34f53aea8ad0, type: 3}
+  m_Script: {fileID: 11500000, guid: f365cc4e7937f4bf7b57386faf9f0d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinValue: 3
-  numberCount: {fileID: 0}
-  counterText: {fileID: 777388520}
+  number: 0
+  total: 0
+  cars:
+  - Van
+  - Mini Van
+  - Mystery Machine
+  - '"Free Candy" Van'
+  - News Van
 --- !u!61 &2032164401
 BoxCollider2D:
   m_ObjectHideFlags: 0
