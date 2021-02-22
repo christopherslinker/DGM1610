@@ -34,7 +34,6 @@ public class InClassIfStatement : MonoBehaviour
         if (a + b == c)
         {
             print(true);
-            
         }
         else
         {
