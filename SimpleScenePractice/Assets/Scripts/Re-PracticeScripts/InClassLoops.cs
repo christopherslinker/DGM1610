@@ -22,11 +22,8 @@ public class InClassLoops : MonoBehaviour
         {
             print("What is your favorite type of" + car);
         }
-
-        foreach (var weapons in Weapon)
-        {
-            
-        }
+        
+        
     }
 
     // Update is called once per frame
