@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.WSA.Input;
 
 public class CountDownBehavior : MonoBehaviour
 {
+    public int number = 3;
     public float holdTime = 1f;
-    public int number;
     public Text countDownText;
+
+    private WaitForSeconds wfsOBJ;
+
     IEnumerator Start()
     {
         wfsOBJ = new WaitForSeconds(holdTime);
-        
+
         while (number > 0)
         {
             wfsOBJ = new WaitForSeconds(holdTime);
@@ -25,4 +29,6 @@ public class CountDownBehavior : MonoBehaviour
 
         countDownText.text = null;
     }
+}
+    
     
