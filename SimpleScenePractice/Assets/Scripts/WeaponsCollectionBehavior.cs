@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class WeaponsCollectionBehavior : MonoBehaviour
 {
-    public Weapon weaponOBJ;
+    public Weapons weaponOBJ;
 
-    public WeaponCollection WeaopCollectionOBJ;
+    public WeaponCollection weaponCollectionOBJ;
 
     private void Start()
     {
-        foreach (var weapon in WeaponCollectionOBJ.weapList)
+        foreach (var weapon in weaponCollectionOBJ.weaponsList)
         {
             if (weapon == weaponOBJ)
             {
@@ -22,7 +22,7 @@ public class WeaponsCollectionBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        WeaponCollectionOBJ.weaponList.Add(weaponOBJ);
+        weaponCollectionOBJ.weaponList.Add(weaponOBJ);
         gameObject.SetActive(false);
     }
 }
