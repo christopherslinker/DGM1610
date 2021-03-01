@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WeaponsCollectionBehavior : MonoBehaviour
 {
-    public Weapons weaponOBJ;
+    public Weapon weaponOBJ;
 
     public WeaponCollection weaponCollectionOBJ;
 
