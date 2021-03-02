@@ -3,17 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponsCollectionBehavior : MonoBehaviour
+public class WeaponsCollectionBehaviour : MonoBehaviour
 {
-    public Weapons weaponOBJ;
-
-    public WeaponCollection weaponCollectionOBJ;
+    public Weapons weaponObj;
+    public WeaponCollection weaponCollectionObj;
 
     private void Start()
     {
-        foreach (var weapon in weaponCollectionOBJ.weaponsList)
+        foreach (var weapon in weaponCollectionObj.weaponsList)
         {
-            if (weapon == weaponOBJ)
+            if (weapon == weaponObj)
             {
                 gameObject.SetActive(false);
             }
@@ -22,7 +21,7 @@ public class WeaponsCollectionBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        weaponCollectionOBJ.weaponList.Add(weaponOBJ);
+        weaponCollectionObj.weaponsList.Add(weaponObj);
         gameObject.SetActive(false);
     }
 }
