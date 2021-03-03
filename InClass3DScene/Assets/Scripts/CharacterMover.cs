@@ -18,6 +18,7 @@ public class CharacterMover : MonoBehaviour
     {
         movement.y = gravity;
         movement.x = speed * Input.GetAxis("Horizontal");
+        movement.z = speed * Input.GetAxis("Vertical");
         controller.Move(movement * Time.deltaTime);
     }
 }
