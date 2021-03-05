@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterMover : MonoBehaviour
 {
     public CharacterController controller;
-    public Vector3 movement;
+    public Vector3 movement, rotation;
     public float speed = 3f, gravity = -8f;
     private Vector3 yDirection;
 
@@ -16,6 +16,9 @@ public class CharacterMover : MonoBehaviour
             movement.y = gravity;
             movement.x = speed * Input.GetAxis("Horizontal");
             movement.z = speed * Input.GetAxis("Vertical");
+            rotation.y = Input.GetAxis("Horizontal");
+            transform.Rotate(rotation);
+            movement = transform.TransformDirection(movement);
             controller.Move(movement * Time.deltaTime);
         }
 
