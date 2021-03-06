@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class FollowPlayer : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public GameObject player;
+    private Vector3 offset = new Vector3(2, 1, 0);
+    
     // Start is called before the first frame update
     void Start()
     {
-        //Move the vehicle forward
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = player.transform.position + offset;
     }
 }
