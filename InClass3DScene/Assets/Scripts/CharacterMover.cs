@@ -6,9 +6,9 @@ public class CharacterMover : MonoBehaviour
 {
     public CharacterController controller;
     public Vector3 movement, rotation;
-    public float speed = 3f, gravity = -8f;
+    public float speed = 100f, gravity = -8f;
     private Vector3 yDirection;
-
+    public GameObject projectilePrefab;
     public float jumpForce = 300f;
     void Update()
     {
@@ -22,6 +22,10 @@ public class CharacterMover : MonoBehaviour
             controller.Move(movement * Time.deltaTime);
         }
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
         /*if (Input.GetButtonDown("Jump"))
         {
             yDirection.y = jumpForce;
