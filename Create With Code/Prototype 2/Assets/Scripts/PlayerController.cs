@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,13 +11,13 @@ public class PlayerController : MonoBehaviour
     public float xRange = 10.0f;
 
     public GameObject projectilePrefab;
-    // Start is called before the first frame update
-    void Start()
+
+
+    private void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.position.x < -xRange)
@@ -35,5 +36,7 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
+
+        
     }
 }
