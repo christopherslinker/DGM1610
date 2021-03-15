@@ -9,6 +9,7 @@ public class CharacterMover : MonoBehaviour
 
     private CharacterController controller;
     private Vector3 movement, rotation;
+    public GameObject projectilePrefab;
 
 
     private void Start()
@@ -29,5 +30,10 @@ public class CharacterMover : MonoBehaviour
         transform.Rotate(rotation);
         movement = transform.TransformDirection(movement);
         controller.Move(movement * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.F))
+        { 
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
     }
 }
