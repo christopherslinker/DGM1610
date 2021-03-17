@@ -30,10 +30,5 @@ public class CharacterMover : MonoBehaviour
         transform.Rotate(rotation);
         movement = transform.TransformDirection(movement);
         controller.Move(movement * Time.deltaTime);
-
-        if (Input.GetKeyDown(KeyCode.F))
-        { 
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ public class DestroyOutOfBounds : MonoBehaviour
 {
     private float topBound = 30;
 
-    private float lowerBound = -100;
+    private float lowerBound = -150;
     void Update()
     {
         if (transform.position.z > topBound)
@@ -17,5 +18,10 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             Destroy(gameObject);
         } 
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Destroy(gameObject);
     }
 }
