@@ -12,7 +12,7 @@ public class FireBehavior : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Instantiate(bullet, transform);
+            Instantiate(bullet, transform.position, transform.rotation);
         }
     }
 }
