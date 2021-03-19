@@ -12,7 +12,15 @@ public class BulletBehaviour : MonoBehaviour
     {
         bulletRB = GetComponent<Rigidbody>();
         forces.Set(bulletForce, 0, 0);
-        bulletRB.AddRelativeForce(forces);
+        bulletRB.velocity += transform.forward * bulletForce;
+
+    }
+
+    public void RunBullet()
+    {
+        bulletRB = GetComponent<Rigidbody>();
+        forces.Set(bulletForce, 0, 0);
+        bulletRB.velocity += transform.forward * bulletForce;
     }
 
     // Update is called once per frame
