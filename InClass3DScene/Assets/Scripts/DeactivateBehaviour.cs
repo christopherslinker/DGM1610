@@ -9,4 +9,10 @@ public class DeactivateBehaviour : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
+    }
 }

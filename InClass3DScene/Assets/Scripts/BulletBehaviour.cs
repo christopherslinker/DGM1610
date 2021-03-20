@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,24 +9,21 @@ public class BulletBehaviour : MonoBehaviour
     private Rigidbody bulletRB;
     public float bulletForce = 10;
     private Vector3 forces;
-    void Start()
+
+    private void Awake()
     {
         bulletRB = GetComponent<Rigidbody>();
-        forces.Set(bulletForce, 0, 0);
-        bulletRB.velocity += transform.forward * bulletForce;
-
     }
 
-    public void RunBullet()
+    private void OnEnable()
     {
-        bulletRB = GetComponent<Rigidbody>();
+        bulletRB.WakeUp();
         forces.Set(bulletForce, 0, 0);
-        bulletRB.velocity += transform.forward * bulletForce;
+        bulletForce.AddRelativeForce(forces);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        bulletRB.Sleep();
     }
 }
