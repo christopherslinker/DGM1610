@@ -19,8 +19,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         bulletRB.WakeUp();
         forces.Set(bulletForce, 0, 0);
-        //bulletForce.AddRelative(forces); doesn't work. Error with AddRelative.
-        bulletForce.CompareTo(forces);
+        bulletRB.AddRelativeForce(forces);
     }
 
     private void OnDisable()
