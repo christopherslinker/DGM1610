@@ -7,6 +7,8 @@ public class CharacterMover : MonoBehaviour
 {
     public float speed = 3f, graivty = -8f, jumpForce = 10f;
     private float yDirection;
+    public int jumpCountMax = 2;
+    private int jumpCount;
     private CharacterController controller;
     private Vector3 movement, rotation;
     public GameObject projectilePrefab;
@@ -25,12 +27,15 @@ public class CharacterMover : MonoBehaviour
         if (controller.isGrounded && movement.y < 0)
         {
             yDirection = -1f;
+            jumpCount = 0;
         }
         
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") & jumpCount < jumpCountMax)
         {
             yDirection = jumpForce;
+            jumpCount++;
         }
+
         rotation.y = Input.GetAxis("Horizontal");
         transform.Rotate(rotation);
         movement = transform.TransformDirection(movement);
