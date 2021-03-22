@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterMover : MonoBehaviour
 {
     public float speed = 3f, graivty = -8f, jumpForce = 10f;
-
+    private float yDirection;
     private CharacterController controller;
     private Vector3 movement, rotation;
     public GameObject projectilePrefab;
@@ -18,15 +18,20 @@ public class CharacterMover : MonoBehaviour
     }
 
     void Update()
-    {
-        movement.Set(speed*Input.GetAxis("Vertical"), graivty, 0);
-        rotation.y = Input.GetAxis("Horizontal");
+    { 
+        movement.Set(speed*Input.GetAxis("Vertical"), yDirection, 0);
+        yDirection += graivty * Time.deltaTime;
 
-        if (Input.GetButtonDown("Jump"))
+        if (controller.isGrounded && movement.y < 0)
         {
-            movement.y = jumpForce;
+            yDirection = -1f;
         }
         
+        if (Input.GetButtonDown("Jump"))
+        {
+            yDirection = jumpForce;
+        }
+        rotation.y = Input.GetAxis("Horizontal");
         transform.Rotate(rotation);
         movement = transform.TransformDirection(movement);
         controller.Move(movement * Time.deltaTime);
