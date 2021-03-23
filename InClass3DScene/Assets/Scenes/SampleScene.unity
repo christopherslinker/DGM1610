@@ -233,7 +233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   graivty: -8
-  jumpForce: 300
+  jumpForce: 5
+  jumpCountMax: 2
   projectilePrefab: {fileID: 3312232979354659985, guid: b078bd2fe5ea4440cb79e90c56bd3451,
     type: 3}
 --- !u!143 &781621219
