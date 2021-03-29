@@ -22,17 +22,18 @@ public class CollisionBehaviour : MonoBehaviour
             print("Health.");
         }
         
-        public void PowerUp()
-        {
-            print("got power up");
-        }
-        public void Health()
-        {
+    }
+    public void PowerUp()
+    {
+        print("got power up");
+    }
+    public void Health()
+    {
             print("got health");
         }
         public void Ammo()
         {
             print("got Ammo");
-        }
     }
+    
 }
