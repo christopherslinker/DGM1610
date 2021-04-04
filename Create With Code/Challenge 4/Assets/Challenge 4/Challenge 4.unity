@@ -303,6 +303,7 @@ MonoBehaviour:
     type: 3}
   powerupPrefab: {fileID: 4446131693967519089, guid: c5497424856514b2ba61b78375567988,
     type: 3}
+  enemySpeed: 50
   enemyCount: 0
   waveCount: 1
   player: {fileID: 583048338}
@@ -579,7 +580,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasPowerup: 0
   powerupIndicator: {fileID: 1427939658}
-  powerUpDuration: 5
+  powerUpDuration: 10
+  turboSmoke: {fileID: 1343539221}
 --- !u!1 &680832294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1199,12 @@ Transform:
   m_Father: {fileID: 1170353596}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
+--- !u!198 &1343539221 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4392870381175910774, guid: 6562db3a873684fa9b7da3aef8329d82,
+    type: 3}
+  m_PrefabInstance: {fileID: 454460033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1403545340
 PrefabInstance:
   m_ObjectHideFlags: 0
