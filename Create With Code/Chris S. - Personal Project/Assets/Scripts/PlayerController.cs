@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private float forwardInput;*/
    
    //tutorials scripts
-   private float speed = 10.0f;
+   private float speed = 25.0f;
    private Rigidbody playerRb;
    private float zBound = 6;
    private float xBound = 15;
@@ -70,6 +71,22 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x > xBound)
         {
             transform.position = new Vector3(transform.position.z, transform.position.y, xBound);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Player Collided With Enemy");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
         }
     }
 }
