@@ -24,5 +24,7 @@ public class Notes : MonoBehaviour
     /*INT
      int or integers are whole numbers.*/
     
-    /**/
+    /*UNITY ACTIONS
+     it works somewhat like a radio, something sends a signal and something receives it.
+     So we we can use a unity action to send a signal to the player to turn it off at game over.*/
 }
