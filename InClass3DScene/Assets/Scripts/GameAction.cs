@@ -1,0 +1,23 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+[CreateAssetMenu]
+public class GameAction : ScriptableObject
+{
+
+    public UnityAction action;
+    // Start is called before the first frame update
+
+    public void Raise()
+    {
+        action?.Invoke();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
