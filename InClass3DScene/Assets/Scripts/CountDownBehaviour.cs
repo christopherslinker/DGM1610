@@ -21,7 +21,7 @@ public class CountDownBehaviour : MonoBehaviour
 
         while (number > 0)
         {
-            countDownText = number.ToString();
+            //countDownText = number.ToString();
             number--;
             yield return wfsObj;
         }

@@ -8,12 +8,12 @@ public class SpawnManager : MonoBehaviour
     public GameObject powerup;
 
     private float zEnemySpawn = 12.0f;
-    private float xSpawnRange = 16.0f;
+    private float xSpawnRange = 7.0f;
     private float zPowerupRange = 5.0f;
     private float ySpawn = 0.75f;
 
     private float powerUpSpawnTime = 5.0f;
-    private float enemySpawnTime = 1.0f;
+    private float enemySpawnTime = 3.0f;
     private float startDelay = 1.0f;
 
     // Start is called before the first frame update

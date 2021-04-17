@@ -62,16 +62,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, zBound);
         }
-
-        if (transform.position.x < -xBound)
-        {
-            transform.position = new Vector3(transform.position.z, transform.position.y, -xBound);
-        }
-
-        if (transform.position.x > xBound)
-        {
-            transform.position = new Vector3(transform.position.z, transform.position.y, xBound);
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
