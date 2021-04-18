@@ -5,39 +5,28 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // my attempt
-   /* private float speed = 15f;
-    private float horizontalInput;
-    private float forwardInput;*/
-   
-   //tutorials scripts
-   private float speed = 25.0f;
+    public bool gameOver;
+    
+    private float speed = 25.0f;
    private Rigidbody playerRb;
    private float zBound = 6;
    private float xBound = 15;
+
+   private PlayerController playerControllerScript;
+
+   public ParticleSystem explosionParticle;
    
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
+        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
 
     void Update()
     {
-        //my attempt
-        /*horizontalInput = Input.GetAxis("Horizontal");
-        forwardInput = Input.GetAxis("Vertical");
-
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);*/
-
         MovePlayer();
         ConstrainsPlayerPosition();
-
-
-
-
-
     }
     
     //moves the player based on arrow key input
@@ -46,8 +35,12 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        playerRb.AddForce(Vector3.forward * speed * verticalInput);
-        playerRb.AddForce(Vector3.right * speed * horizontalInput);
+        if (playerControllerScript.gameOver == false)
+        {
+            playerRb.AddForce(Vector3.forward * speed * verticalInput);
+            playerRb.AddForce(Vector3.right * speed * horizontalInput);
+        }
+
     }
     
     //Invisible walls
@@ -68,7 +61,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Player Collided With Enemy");
+            gameOver = true;
+            Debug.Log("Game Over!");
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            Destroy(gameObject);
         }
     }
 
