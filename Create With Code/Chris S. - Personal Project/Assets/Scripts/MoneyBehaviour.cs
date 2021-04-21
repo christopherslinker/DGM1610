@@ -15,9 +15,6 @@ public class MoneyBehaviour : MonoBehaviour
     {
         scoreBehaviour = GameObject.Find("Score Behaviour").GetComponent<ScoreBehaviour>();
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        scoreBehaviour.UpdateScore(pointValue);
-    }
+    
+    
 }

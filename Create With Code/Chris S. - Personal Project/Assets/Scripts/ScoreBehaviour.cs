@@ -12,8 +12,9 @@ public class ScoreBehaviour : MonoBehaviour
 
     void Start()
     {
+        
         score = 0;
-        UpdateScore(0);
+        UpdateScore(pointValue);
         
     }
 
@@ -21,6 +22,11 @@ public class ScoreBehaviour : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
+    }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        scoreBehaviour.UpdateScore(pointValue);
     }
 
 
