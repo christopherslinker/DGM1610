@@ -2,19 +2,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class MoneyBehaviour : MonoBehaviour
 {
-    private ScoreBehaviour scoreBehaviour;
 
-    public int pointValue;
-
-
-    private void Start()
+    private ScoreManager scoreManager;
+    // Start is called before the first frame update
+    void Start()
     {
-        scoreBehaviour = GameObject.Find("Score Behaviour").GetComponent<ScoreBehaviour>();
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
     
-    
+
+    private void OnDestroy()
+    {
+        scoreManager.UpdateScore(5);
+    }
 }

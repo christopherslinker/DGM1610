@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     private float speed = 25.0f;
    private Rigidbody playerRb;
    private float zBound = 6;
-   private float xBound = 15;
 
    private PlayerController playerControllerScript;
 
