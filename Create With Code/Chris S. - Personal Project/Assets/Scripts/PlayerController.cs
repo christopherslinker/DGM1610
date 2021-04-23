@@ -14,11 +14,14 @@ public class PlayerController : MonoBehaviour
    private PlayerController playerControllerScript;
 
    public ParticleSystem explosionParticle;
+   private GameOverBehaviour gameOverBehaviour;
    
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        
+        gameOverBehaviour = GameObject.Find("GameOverBehaviour").GetComponent<GameOverBehaviour>();
     }
 
 
@@ -64,6 +67,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over!");
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
             Destroy(gameObject);
+            gameOverBehaviour.GameOver();
         }
     }
 

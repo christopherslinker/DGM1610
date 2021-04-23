@@ -24,12 +24,7 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnPowerup", startDelay, powerUpSpawnTime);
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 
     void SpawnRandomEnemy()
     {
