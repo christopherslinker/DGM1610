@@ -17,7 +17,7 @@ public class CoRoutineEventBehaviour : MonoBehaviour
 
         while (number < maxNumber)
         {
-            startEvent.Invoke();
+            //startEvent.Invoke();
             yield return wfsOBJ;
             number++;
         }

@@ -12,10 +12,10 @@ public class Counter : MonoBehaviour
     {
         counterText.text = numberCount.value.ToString();
     }
-    void OnTriggerEnter2D()
+   /* void OnTriggerEnter2D()
     {
         numberCount.value += creditValue;
         counterText.text = numberCount.value.ToString();
         gameObject.SetActive(false);
-    }
+    }*/
 }
