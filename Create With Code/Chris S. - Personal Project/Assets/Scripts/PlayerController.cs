@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
             Destroy(gameObject);
             gameOverBehaviour.GameOver();
+            playerAudio.PlayOneShot(deathSound, 1.0f);
             
         }
     }
