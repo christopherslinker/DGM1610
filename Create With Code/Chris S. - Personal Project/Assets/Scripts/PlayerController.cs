@@ -15,11 +15,15 @@ public class PlayerController : MonoBehaviour
 
    public ParticleSystem explosionParticle;
    private GameOverBehaviour gameOverBehaviour;
+
+   private AudioSource playerAudio;
+   public AudioClip deathSound;
    
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        playerAudio = GetComponent<AudioSource>();
         
         gameOverBehaviour = GameObject.Find("GameOverBehaviour").GetComponent<GameOverBehaviour>();
     }
@@ -68,6 +72,7 @@ public class PlayerController : MonoBehaviour
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
             Destroy(gameObject);
             gameOverBehaviour.GameOver();
+            
         }
     }
 
