@@ -67,12 +67,13 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            playerAudio.PlayOneShot(deathSound, 1.0f);
             gameOver = true;
             Debug.Log("Game Over!");
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
             Destroy(gameObject);
             gameOverBehaviour.GameOver();
-            playerAudio.PlayOneShot(deathSound, 1.0f);
+
             
         }
     }

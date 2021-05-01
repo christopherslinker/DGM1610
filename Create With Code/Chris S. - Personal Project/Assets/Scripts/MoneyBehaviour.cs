@@ -7,10 +7,14 @@ public class MoneyBehaviour : MonoBehaviour
 {
 
     private ScoreManager scoreManager;
-    // Start is called before the first frame update
+
+    private AudioSource moneyAudio;
+    public AudioClip collectSound;
+
     void Start()
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        moneyAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
