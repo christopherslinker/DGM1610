@@ -22,7 +22,15 @@ public class MoneyBehaviour : MonoBehaviour
     {
         
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            moneyAudio.PlayOneShot(collectSound, 1.0f);
+        }
+    }
+
 
     private void OnDestroy()
     {

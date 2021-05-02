@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
         {
             playerAudio.PlayOneShot(deathSound, 1.0f);
             gameOver = true;
-            Debug.Log("Game Over!");
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
             Destroy(gameObject);
             gameOverBehaviour.GameOver();
